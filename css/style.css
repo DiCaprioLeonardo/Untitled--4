@@ -147,6 +147,10 @@ h1{
     height: 60px;
 }
 
+.navbar-toggler{
+    background: none;
+    border: none;
+}
 
 .navbar-toggler img{
     width: 30px;
@@ -1122,6 +1126,9 @@ button:focus
     scale: 1.1;
 }
 
+.show{
+    display: flex;
+}
 
 
 @media(max-width : 1400px){   
@@ -1194,7 +1201,7 @@ button:focus
     .slider__item {
         display: grid;
         grid-template-columns: 100px 450px 75px 480px 95px;
-        grid-template-rows: 40px 30px 280px 45px 60px 35px 60px;
+        grid-template-rows: 40px 30px 280px 45px 60px 0px 60px;
         text-align: left;
     }
 
@@ -1295,13 +1302,18 @@ button:focus
 
 @media(max-width : 992px){
    
+    .header-menu{
+        background: none;
+    }
+
     .logo,
     .menu{
         display: none;
     }
     
     .navbar-toggler{
-        margin-left: 760px;
+        margin-left: 900px;
+        background: #DE5150;
     }
 
     .slider__item {
@@ -1373,7 +1385,7 @@ button:focus
 @media(max-width : 768px){    
     
     .navbar-toggler{
-        margin-left: 650px;
+        margin-left: 700px;
     }
     
     .slider__item {
@@ -1433,7 +1445,7 @@ button:focus
 @media(max-width : 576px){
 
     .navbar-toggler {
-        margin-left: 450px;
+        margin-left: 520px;
     }
     
     .slider__item {
@@ -1528,7 +1540,7 @@ button:focus
 @media(max-width : 320px){
 
     .navbar-toggler {
-        margin-left: 200px;
+        margin-left: 250px;
     }
 
     .slider__item {
