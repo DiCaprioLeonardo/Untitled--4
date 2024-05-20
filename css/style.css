@@ -37,6 +37,11 @@ header {
     height: 73px;
 }
 
+.logo{
+    transform: translateY(-100px);
+    transition: 0.4s transform ease;
+}
+
 .mainmenu__list{
     display: flex;
     flex-direction: row;
@@ -46,12 +51,19 @@ header {
 
     list-style: none;
     width: 270px;
+
+    padding-left: 0px;    
 }
 
 .menu{
     width: 270px;
-    padding-left: 345px;/*375px - 32px*/
-    padding-right: 390px;
+    margin-left: 375px;/*375px - 32px*/
+    margin-right: 390px;
+
+
+    position: relative;
+    transform: translateY(-100px);
+    transition: 0.4s transform ease;
 }
 
 .mainmenu__item{
@@ -134,17 +146,20 @@ h1{
     padding: 30px;
 }
 
-.slider__button{
+.slider__button {
     grid-column: 4;
     grid-row: 8;
-
     width: 190px;
     height: 60px;
-}
-
-.slider__button img{
-    width: 190px;
-    height: 60px;
+    border: none;
+    border-radius: 50px 50px 50px 50px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF4948;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .navbar-toggler{
@@ -155,6 +170,7 @@ h1{
 .navbar-toggler img{
     width: 30px;
 }
+
 /****************************collection********************************************/
 
 .collection-slider .slider{
@@ -1015,10 +1031,13 @@ input{
     border: none;
     border-radius: 50px 50px 50px 50px;
     background-color: #FF4948;
-}
 
-.button img{
-    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .button p{
@@ -1127,15 +1146,15 @@ button:focus
 }
 
 .show{
-    display: flex;
+    transform: translateY(0px);    
 }
 
-
+/**************************************/
 @media(max-width : 1400px){   
 
     .menu{
-        padding-left: 320px;
-        padding-right: 365px;
+        margin-left: 352px;
+        margin-right: 365px;
     }
 
 
@@ -1187,8 +1206,8 @@ button:focus
 @media(max-width : 1200px){
 
     .menu {
-        padding-left: 280px;
-        padding-right: 325px;
+        margin-left: 312px;
+        margin-right: 325px;
     }
     
     .section__banner {
@@ -1303,18 +1322,16 @@ button:focus
 @media(max-width : 992px){
    
     .header-menu{
-        background: none;
-    }
+        /*background: none;*/
+    }    
 
-    .logo,
-    .menu{
-        display: none;
+    .menu {
+        margin-left: 150px;        
     }
     
-    .navbar-toggler{
-        margin-left: 900px;
-        background: #DE5150;
-    }
+    /*.navbar-toggler{
+        margin-left: 900px;        
+    }*/
 
     .slider__item {
         display: grid;
@@ -1383,10 +1400,11 @@ button:focus
 }
 
 @media(max-width : 768px){    
-    
-    .navbar-toggler{
-        margin-left: 700px;
-    }
+
+    .menu {
+        margin-left: 150px;
+        margin-right: 150px;
+    }    
     
     .slider__item {
         display: grid;
@@ -1444,8 +1462,13 @@ button:focus
 
 @media(max-width : 576px){
 
-    .navbar-toggler {
-        margin-left: 520px;
+    .logo{
+        display: none;
+    }
+
+    .menu {
+        margin-left: 150px;
+        margin-right: 100px;
     }
     
     .slider__item {
@@ -1539,8 +1562,29 @@ button:focus
 
 @media(max-width : 320px){
 
-    .navbar-toggler {
-        margin-left: 250px;
+    .section-wrapper {        
+        height: 200px;
+    }    
+
+    .mainmenu__list {
+        display: flex;
+        flex-direction: column;        
+    }
+
+    .whiteLine{
+        display: none;
+    }
+
+    .menu {
+        margin-left: 0px;
+        margin-right: 0px;
+
+        transform: translateY(-250px);
+        
+    }
+
+    .show{
+        transform: translateY(0px);    
     }
 
     .slider__item {
