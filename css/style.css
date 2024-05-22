@@ -94,6 +94,19 @@ header {
 .headphones{
     grid-column: 2;
     width: 570px;
+    z-index: 2;
+
+    /*background-image: url("../img/menu/music1.svg");*/
+}
+
+.music{
+    width: 800px;
+    height: 630px;
+
+    grid-column: 1;
+    position: relative;
+    top: -100px;
+    z-index: 1;
 }
 
 .slider__text{
@@ -473,11 +486,18 @@ h1{
 .image-description{
     grid-column: 3;
     padding-top: 65px;
+
+    background-image: url('../img/menu/music2.svg');
+    background-repeat: no-repeat;
+    width: 620px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .image-description img{
-    width: 332px;
-    position: relative;
-    bottom: 0;
+    width: 332px;    
 }
 
 /****************************product****************************/
@@ -807,6 +827,7 @@ h1{
 
 .advantage{
     padding-top: 130px;
+    padding-bottom: 130px;
 }
 
 .advantage__wrapper{
@@ -955,29 +976,31 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 574px;
-
-    width: 100%;
-
-    padding-bottom: 130px;
+    height: 320px;
+    width: 100%;    
 }
 
-.form .container{
-    padding-top: 130px;
+.form .container{    
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-image: url("../img/menu/music3.svg");
+    width: 1235px;
+    height: 295px;
+    background-repeat: no-repeat;
+
+    background-position: top;
+
 }
 
 .form .container .q{       
     text-align: center;   
     background-color: #FFF4F4;
-    border-radius: 20px;
-
-    margin-top: 120px;    
+    border-radius: 20px;   
 
     width: 710px;     
-    height: 292px;    
+    height: 290px;    
 
     display: flex;
     align-items: center;
@@ -1056,6 +1079,7 @@ input{
 /************************footer*******************/
 
 footer {
+    margin-top: 130px;
     min-height: auto;           
 }
 
@@ -1143,7 +1167,10 @@ a .cart:hover,
 a .cart:focus,
 
 button:hover,
-button:focus
+button:focus,
+
+.slider__button:hover,
+.slider__button:focus
 {   
     scale: 1.1;
 }
@@ -1190,6 +1217,23 @@ button:focus
 
     h1{
         font-size: 100px;
+    }
+
+    .music{
+        display: none;
+    }
+
+    /****************************/
+
+    .form .container{
+        background-image: none;
+    }
+
+    /*******************************/
+
+    .image-description{
+        background-image: none;
+        width: 332px;
     }
 
 
@@ -1336,19 +1380,11 @@ button:focus
 }
 
 @media(max-width : 992px){
-   
-    .header-menu{
-        /*background: none;*/
-    }    
 
     .menu {
         margin-left: 200px;
         margin-right: 250px;
     }
-    
-    /*.navbar-toggler{
-        margin-left: 900px;        
-    }*/
 
     .slider__item {
         display: grid;
@@ -1372,7 +1408,7 @@ button:focus
 
     .description .container{
         padding-left: 25px;
-        padding-right: 224px;
+        padding-right: 100px;
 
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -1446,7 +1482,7 @@ button:focus
         grid-template-columns: 1fr;
     }
 
-    .image-description img{
+    .image-description{
         display: none;
     }
 
