@@ -8,5 +8,7 @@ const menuWrapper = document.getElementById('menu__wrapper');
 btn.addEventListener('click', () => {
     logo.classList.toggle("show");
     menu.classList.toggle("show");
-    /*menuWrapper.classList("transorm");*/
+    menuWrapper.classList.toggle("transorm");
+
+    btn.classList.toggle("burger");
 });
