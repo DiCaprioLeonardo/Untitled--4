@@ -26,6 +26,9 @@ header {
     z-index: 1000;     
 
     background: linear-gradient(to right, #FF9292, #DE5150); 
+
+    transform: translateY(0px);
+    transition: 0.4s transform ease;
 }
 
 .section-wrapper {
@@ -1145,8 +1148,17 @@ button:focus
     scale: 1.1;
 }
 
-.show{
+.show {
     transform: translateY(0px);    
+}
+
+.transorm{
+    transform: translateY(-100px);    
+}
+
+.burger{
+    transform: translateY(50px);
+    background-color: #DE5150;
 }
 
 /**************************************/
@@ -1174,6 +1186,10 @@ button:focus
 
     .headphones {
         width: 500px;
+    }
+
+    h1{
+        font-size: 100px;
     }
 
 
@@ -1326,7 +1342,8 @@ button:focus
     }    
 
     .menu {
-        margin-left: 150px;        
+        margin-left: 200px;
+        margin-right: 250px;
     }
     
     /*.navbar-toggler{
@@ -1585,6 +1602,15 @@ button:focus
 
     .show{
         transform: translateY(0px);    
+    }
+
+    .transorm{
+        transform: translateY(-220px);    
+    }
+    
+    .burger{
+        transform: translateY(110px);
+        background-color: #DE5150;
     }
 
     .slider__item {
