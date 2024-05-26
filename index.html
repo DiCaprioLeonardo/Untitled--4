@@ -7,14 +7,14 @@
     <meta property="og:site_name" content="Untitled (4)">
     <meta property="og:url" content="https://github.com/DiCaprioLeonardo/Untitled--4">
     <meta property="og:description" content="Индивидуальное задание по вёрстке">
+    <meta property="og:image" content="">
     <link rel="stylesheet" href="css/style.css">  
     <script defer src="js/script.js"></script>    
     <title>Главная страница</title>
 </head>
 <body>
     <header>        
-        <section class="section header-menu" id="menu__wrapper">
-            
+        <section class="section header-menu" id="menu__wrapper">            
             <div class="section-wrapper container menu__wrapper">
 
                 <div class="logo show">
@@ -28,23 +28,23 @@
                                 <img src="img/menu/Search.svg" alt="search" class="menu-a">                                
                             </a>
                         </li>
-                        <li class="whiteLine">
-                            <img src="img/menu/Line.svg" alt="">
+                        <li class="mainmenu__item">
+                            <hr class="whiteLine">
                         </li>
                         <li class="mainmenu__item">
                             <a href="#">
                                 <img src="img/menu/Bag.svg" alt="bag-dash" class="menu-a">                                
                             </a>
                         </li>
-                        <li class="whiteLine">
-                            <img src="img/menu/Line.svg" alt="">
+                        <li class="mainmenu__item">
+                            <hr class="whiteLine">
                         </li>
                         <li class="mainmenu__item">
                             <a href="#">
                                 <img src="img/menu/Person.svg" alt="person" class="menu-a">                                
                             </a>
                         </li>
-                    </ul>
+                    </ul>                    
                 </div>
 
                 <button class="navbar-toggler" id="navbar-toggler" type="button">
@@ -54,10 +54,11 @@
         </section>
         <section class="section__banner">
             <div class="container">
-                <div class="slider__item">
-                    
-                    <img class="headphones" src="img/menu/headphones1.png" alt="наушники">
-                    <img class="music" src="img/menu/music1.svg" alt="music">
+
+                <!--<img class="music" src="img/menu/music1.svg" alt="music"> -->
+
+                <div class="slider__item">                    
+                    <img class="headphones" src="img/menu/headphones1.png" alt="наушники">                    
 
                     <div class="slider__text">
                         HEART IT. FEEL IT
@@ -68,9 +69,7 @@
                         <h2 class="price-new">&#36; 435</h2>
                         <img class="stick" src="img/menu/stick.svg" alt="stick">
                         <h2 class="price-old">&#36; 465</h2>
-                    </div>
-                    
-                    
+                    </div>                    
 
                     <a href="#" class="slider__button">
                         BUY NOW                        
@@ -83,8 +82,6 @@
         <!-- <section class="section collection">
             <h2>Our Latest colour collection 2021</h2>
         </section> -->
-
-
         
 
         <!-- <div class="collection-slider">
@@ -136,35 +133,36 @@
 
         <section class="section description">
             <div class="container">
-                <div class="description__text">
-                    <h2>Good headphones and loud music is all you need</h2>
-
-                    <div class="description__text--1">                       
-
-                        <img src="img/description/Charge.svg" alt="battery" class="battery">
-                            <h3 class="h3-1">Battery</h3>
-                            <p class="p-1">Battery 6.2V-AAC codec</p>
-                            <a href="#" class="a-1"><p>Learn More</p></a>
+                <div class="description-grid">
+                    <div class="description__text">
+                        <h2>Good headphones and loud music is all you need</h2>
+    
+                        <div class="description__text--1">                       
+    
+                            <img src="img/description/Charge.svg" alt="battery" class="battery">
+                                <h3 class="h3-1">Battery</h3>
+                                <p class="p-1">Battery 6.2V-AAC codec</p>
+                                <a href="#" class="a-1">Learn More</a>
+                        </div>
+    
+                        <div class="description__text--2">
+                            <img src="img/description/bluetooth.svg" alt="bluetooth" class="bluetooth">
+                                <h3 class="h3-1">Bluetooth</h3>
+                                <p class="p-1">Battery 6.2V-AAC codec</p>
+                                <a href="#" class="a-1">Learn More</a>
+                        </div>
+    
+                        <div class="description__text--3">
+                            <img src="img/description/microphone.svg" alt="microphone" class="microphone">
+                                <h3 class="h3-1">Microphone</h3>
+                                <p class="p-1">Battery 6.2V-AAC codec</p>
+                                <a href="#" class="a-1">Learn More</a>
+                        </div>                    
                     </div>
-
-                    <div class="description__text--2">
-                        <img src="img/description/bluetooth.svg" alt="bluetooth" class="bluetooth">
-                            <h3 class="h3-1">Bluetooth</h3>
-                            <p class="p-1">Battery 6.2V-AAC codec</p>
-                            <a href="#" class="a-1"><p>Learn More</p></a>
+                    <div class="image-description">
+                        <img src="img/description/headphones.png" alt="Solo-3">
                     </div>
-
-                    <div class="description__text--3">
-                        <img src="img/description/microphone.svg" alt="microphone" class="microphone">
-                            <h3 class="h3-1">Microphone</h3>
-                            <p class="p-1">Battery 6.2V-AAC codec</p>
-                            <a href="#" class="a-1"><p>Learn More</p></a>
-                    </div>                     
-                    
-                </div>
-                <div class="image-description">
-                    <img src="img/description/headphones.png" alt="Solo-3">
-                </div>
+                </div>                
             </div>
         </section>
 
@@ -190,7 +188,7 @@
                         <a href="" class="cart-a">
                             <img src="img/otherproducts/Cart2.svg" alt="cart" class="cart">
                         </a>
-                        <img src="img/otherproducts/headphones2.svg" alt="headphones2" class="headphones2">
+                        <img src="img/otherproducts/headphones2.svg" alt="headphones2" class="headphones1">
 
                         <img src="img/otherproducts/Star.svg" alt="star" class="star">
 
@@ -204,7 +202,7 @@
                         <a href="" class="cart-a">
                             <img src="img/otherproducts/Cart3.svg" alt="cart" class="cart">
                         </a>
-                        <img src="img/otherproducts/headphones3.svg" alt="headphones3" class="headphones3">
+                        <img src="img/otherproducts/headphones3.svg" alt="headphones3" class="headphones1">
 
                         <img src="img/otherproducts/Star.svg" alt="star" class="star">
                         <p class="a">4.50</p>                          
@@ -227,18 +225,17 @@
                         <div class="advantage__list">
                             <h2>Whatever you get in the box</h2>
                             <img src="img/bi-arrow-right-circle.svg" alt="arrow-right" class="advantage-list-1--img">
-                            <p class="advantage-list-1--p">5A Charger</p>
-                            <img src="img/advantage/Line.svg" alt="line" class="advantage-list-1--line">
-
+                            <p class="advantage-list-1--p">5A Charger</p>                            
+                            <div class="advantage-list-1--line"></div>
 
                             <img src="img/bi-arrow-right-circle.svg" alt="arrow-right" class="advantage-list-2--img">
                             <p class="advantage-list-2--p">Extra battery</p>
-                            <img src="img/advantage/Line.svg" alt="line" class="advantage-list-2--line">
+                            <div class="advantage-list-2--line"></div>
 
 
                             <img src="img/bi-arrow-right-circle.svg" alt="arrow-right" class="advantage-list-3--img">
                             <p class="advantage-list-3--p">Sophisticated bag</p>
-                            <img src="img/advantage/Line.svg" alt="line" class="advantage-list-3--line">
+                            <div class="advantage-list-3--line"></div>
 
 
                             <img src="img/bi-arrow-right-circle.svg" alt="arrow-right" class="advantage-list-4--img">
@@ -258,13 +255,13 @@
                     <div class="size-form">
                         <h2>Subscribe</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur </p>                
-                        <div class="form-structure">
+                        <form class="form-structure">
                         <input type="email" id="emailInput" placeholder="Enter Your email address" required>
                         
-                        <button class="button">                        
+                        <button class="button" type="submit">                        
                             Subscribe
                         </button>                    
-                        </div>
+                    </form>
                     </div>
                 </div>
             </div>
@@ -282,17 +279,17 @@
                     <ul class="maincontact__list--1">
                         <li class="maincontact__item">
                             <a href="#">
-                                <h4>Home</h4>                                
+                                Home                               
                             </a>
                         </li>
                         <li class="maincontact__item">
                             <a href="#">
-                                <h4>About</h4>                             
+                                About                             
                             </a>
                         </li>
                         <li class="maincontact__item">
                             <a href="#">
-                                <h4>Product</h4>                                
+                                Product                                
                             </a>
                         </li>
                     </ul>
