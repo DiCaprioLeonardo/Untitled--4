@@ -15,39 +15,34 @@ html, body{
 
 /**********************section header-menu*****************************************/
 
+header {
+    min-height: auto;           
+}
+
 .header-menu {
     position:fixed;
-    width: 100%;    
-    top: 0;      
+    top: 0;
+    width: 100%;   
     z-index: 1000;     
 
     background: linear-gradient(to right, #FF9292, #DE5150); 
 
     transform: translateY(0px);
-    transition: 0.4s transform ease;    
+    transition: 0.4s transform ease;
 }
 
 .section-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;    
-    height: 90px;    
-    margin: 0 auto;
-    margin-top: 35px;
-    max-width: 1145px;
+    justify-content: center;
+    padding-top: 34px;
+    height: 73px;
 }
 
 .logo{
     transform: translateY(-100px);
     transition: 0.4s transform ease;
-}
-
-.whiteLine{
-    height: 47px;
-    width: 2px;
-    background-color: white;
-    opacity: 0.5;
 }
 
 .mainmenu__list{
@@ -57,11 +52,18 @@ html, body{
     justify-content: center;
     column-gap: 32px;
 
-    list-style: none;    
+    list-style: none;
+    width: 270px;
+
+    padding-left: 0px;    
 }
 
 .menu{
     width: 270px;
+    margin-left: 375px;/*375px - 32px*/
+    margin-right: 390px;
+
+
     position: relative;
     transform: translateY(-100px);
     transition: 0.4s transform ease;
@@ -73,48 +75,42 @@ html, body{
 
 /*************************section__banner*********************************/
 
-header{
+.section__banner{
+    padding-top: 150px;
     background: linear-gradient(to right, #FF9292, #DE5150);
-}
-
-.section__banner{   
-    /*background: linear-gradient(to right, #FF9292, #DE5150);*/
     color: white;
+
     height: 850px;    
-
-    width: 100%;
-
-    background-image: url("../img/menu/music1.svg"); 
-    background-repeat: no-repeat; 
-    background-position: top left;
-}
-
-.section__banner .container{
-    margin: 0 auto;   
-    margin-top: 120px;    
-    position:relative;
-
-    max-width: 1180px;   
-
-    
 }
 
 .slider__item{
     display:  grid;
-    grid-template-columns: 570px 1fr 520px;
+    grid-template-columns: 165px 570px 95px 520px 270px;
     grid-template-rows: 40px 30px 280px 45px 60px 35px 60px;
 
     text-align: left;    
 }
 
 .headphones{
-    grid-column: 1;
+    grid-column: 2;
     width: 570px;
-    z-index: 2;    
+    z-index: 2;
+
+    /*background-image: url("../img/menu/music1.svg");*/
+}
+
+.music{
+    width: 800px;
+    height: 630px;
+
+    grid-column: 1;
+    position: relative;
+    top: -100px;
+    z-index: 1;
 }
 
 .slider__text{
-    grid-column: 3;
+    grid-column: 4;
     grid-row: 2;
 
     font-size: 22px;
@@ -127,7 +123,7 @@ header{
 }
 
 h1{
-    grid-column: 3;
+    grid-column: 4;
     grid-row: 3;   
     
     font-size: 100px;
@@ -141,7 +137,7 @@ h1{
 }
 
 .price{
-    grid-column: 3;
+    grid-column: 4;
     grid-row: 5;  
 
     display: flex;
@@ -167,7 +163,7 @@ h1{
 }
 
 .slider__button {
-    grid-column: 3;
+    grid-column: 4;
     grid-row: 8;
     width: 190px;
     height: 60px;
@@ -192,7 +188,7 @@ h1{
 }
 
 /****************************collection********************************************/
-/*
+
 .collection-slider .slider{
 
 }
@@ -282,23 +278,15 @@ h1{
 /****************************.description************************************************/
 
 .description{
-    width: 100%;
     height: 605px;
-
-    margin-top: 130px;
 }
 
 .description .container{
-    margin: 0 auto;
-    
-    position:relative;
-    max-width: 1150px;
-    
-}
-
-.description-grid{
     display: grid;
-    grid-template-columns:500px 0px 620px;    
+    grid-template-columns:1fr 190px 1fr;    
+
+    padding-left: 246px;
+    padding-right: 224px;
 }
 
 .description__text{
@@ -515,14 +503,7 @@ h1{
 /****************************product****************************/
 
 .otherproducts{
-    width: 100%;
-    margin-top: 130px;
-}
-
-.otherproducts .container{
-    margin: 0 auto;    
-    position:relative;
-    max-width: 1145px;
+    padding-top: 130px;
 }
 
 .otherproducts-text--1{
@@ -542,7 +523,7 @@ h1{
     font-weight: 400;   
     line-height: 24px;
 
-    width: auto;
+    width: 560px;
     padding-bottom: 43px;
 }
 
@@ -553,7 +534,8 @@ h1{
 
     grid-gap: 30px;
 
-    
+    padding-left: 246px;
+    padding-right: 227px;
 }
 
 .product__item1{
@@ -595,20 +577,25 @@ h1{
 }
 
 .cart-a{
-    width: 80px;
+    width: 79px;
     height: 80px;
     z-index: 100;
+}
 
+.product__item1 .cart-a{
     grid-column: 2;
     grid-row: 1;
 
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+
+    width: 80px;
 
     position: relative;
     top: 25px;
     left: 20px;
+
 }
 
 .headphones1{
@@ -622,7 +609,7 @@ h1{
     width: 330px;    
 }
 
-.star{
+.product__item1 .star{
     grid-column: 1;
     grid-row: 2;
 
@@ -632,7 +619,7 @@ h1{
     padding-top: 35px;
 }
 
-.a{
+.product__item1 .a{
     grid-column: 2;
     grid-row: 2;
 
@@ -646,7 +633,7 @@ h1{
     font-weight: 500;    
 }
 
-.b{
+.product__item1 .b{
     grid-column: 1;
     grid-row: 3;
 
@@ -658,7 +645,7 @@ h1{
     font-weight: 400;    
 }
 
-.c{
+.product__item1 .c{
     grid-column: 2;
     grid-row: 3;
 
@@ -678,6 +665,81 @@ h1{
     grid-template-rows: 385px 65px 45px;   
 }
 
+.product__item2 .cart-a{
+    grid-column: 2;
+    grid-row: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+
+    position: relative;
+    top: 25px;
+    left: 20px;
+
+}
+
+.headphones2{
+    grid-column: 1/2;
+    grid-row: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 330px;    
+}
+
+.product__item2 .star{
+    grid-column: 1;
+    grid-row: 2;
+
+    display: flex;
+    justify-content: left;    
+
+    padding-top: 35px;
+}
+
+.product__item2 .a{
+    grid-column: 2;
+    grid-row: 2;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    
+    padding-top: 35px;
+
+    font-size: 16px;
+    font-weight: 500;    
+}
+
+.product__item2 .b{
+    grid-column: 1;
+    grid-row: 3;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    font-size: 22px;
+    font-weight: 400;    
+}
+
+.product__item2 .c{
+    grid-column: 2;
+    grid-row: 3;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    font-size: 22px;
+    font-weight: 500;    
+}
+
 /*****************************product__item3******************************************/
 
 .product__item3{
@@ -686,24 +748,94 @@ h1{
     grid-template-rows: 385px 65px 45px;   
 }
 
+.product__item3 .cart-a{
+    grid-column: 2;
+    grid-row: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+
+    position: relative;
+    top: 25px;
+    left: 20px;
+
+}
+
+.headphones3{
+    grid-column: 1/2;
+    grid-row: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 330px;    
+}
+
+.product__item3 .star{
+    grid-column: 1;
+    grid-row: 2;
+
+    display: flex;
+    justify-content: left;    
+
+    padding-top: 35px;
+}
+
+.product__item3 .a{
+    grid-column: 2;
+    grid-row: 2;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    
+    padding-top: 35px;
+
+    font-size: 16px;
+    font-weight: 500;    
+}
+
+.product__item3 .b{
+    grid-column: 1;
+    grid-row: 3;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    font-size: 22px;
+    font-weight: 400;    
+}
+
+.product__item3 .c{
+    grid-column: 2;
+    grid-row: 3;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    font-size: 22px;
+    font-weight: 500;    
+}
+
 /*******************************************************/
 
 .advantage{
-    width: 100%; 
-    
-    margin-top: 130px;
-}
-
-.advantage .container{
-    margin: 0 auto;    
-    position:relative;
-    max-width: 1070px;
+    padding-top: 130px;
+    padding-bottom: 130px;
 }
 
 .advantage__wrapper{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
+
+    padding-left: 246px;
+    padding-right: 304px;
 }
 
 .advantage__wrapper--image{
@@ -758,10 +890,8 @@ h1{
     grid-column: 1/2;
     grid-row: 3;    
 
-    width: 290px;
-    height: 1px;
-    background-color: black;
-    opacity: 0.5;
+    font-size: 22px;
+    font-weight: 400;
 
     margin: auto 0;
 }
@@ -788,10 +918,8 @@ h1{
     grid-column: 1/2;
     grid-row: 5;    
 
-    width: 290px;
-    height: 1px;
-    background-color: black;
-    opacity: 0.5;
+    font-size: 22px;
+    font-weight: 400;
 
     margin: auto 0;
 }
@@ -818,10 +946,8 @@ h1{
     grid-column: 1/2;
     grid-row: 7;    
 
-    width: 290px;
-    height: 1px;
-    background-color: black;
-    opacity: 0.5;
+    font-size: 22px;
+    font-weight: 400;
 
     margin: auto 0;
 } 
@@ -852,24 +978,20 @@ h1{
     align-items: center;
     height: 320px;
     width: 100%;    
-
-    margin-top: 120px;
-
-    background-image: url("../img/menu/music3.svg");    
-    background-repeat: no-repeat;
-    background-position: top;
 }
 
 .form .container{    
     display: flex;
     justify-content: center;
     align-items: center;
-        
-    height: 295px;    
 
-    margin: 0 auto;    
-    position:relative;
-    max-width: 1235px;
+    background-image: url("../img/menu/music3.svg");
+    width: 1235px;
+    height: 295px;
+    background-repeat: no-repeat;
+
+    background-position: top;
+
 }
 
 .form .container .q{       
@@ -956,26 +1078,34 @@ input{
 
 /************************footer*******************/
 
-footer {    
+footer {
+    margin-top: 130px;
     min-height: auto;           
 }
 
-footer {
-    background: linear-gradient(to right, #FF9292, #DE5150);    
-    width: 100%; 
-    bottom: 0;       
+footer {    
+    width: 100%;   
+    height: 190px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;        
+    flex-wrap: wrap;
 
-    margin-top: 130px;
+    background: linear-gradient(to right, #FF9292, #DE5150); 
+
+    position: relative;
+    bottom: 0;       
 }
 
 .section-wrapper2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;    
-    height: 190px;
-    margin: 0 auto;    
-    max-width: 1145px;
+    justify-content: center;
+    padding-top: 34px;
+    height: 73px;
 }
 
 .maincontact__list--1{
@@ -991,12 +1121,12 @@ footer {
 
 .contact-menu{
     width: 270px;
-   
+    padding-left: 340px;/*360px - 32px*/
+    padding-right: 210px;    
 }
 
-.maincontact__item a{
-    font-size: 22px;
-    font-weight: 500;
+.maincontact__item{
+    width: 280px;
 }
 
 .maincontact__list--2{
@@ -1007,7 +1137,7 @@ footer {
     column-gap: 35px;
 
     list-style: none;
-    
+    width: 220px;
 }
 
 
@@ -1022,16 +1152,11 @@ ul {
 
 a{
     color: white;
-    text-decoration: none;    
-}
+    text-decoration: none;
+  }
 
-a img,
-button{
-    transition: 0.3s ease;
-}
-
-.a-1:hover,
-.maincontact__item a:hover{
+a p:hover,
+a h4:hover{
     text-decoration: underline;
 }
 
@@ -1064,20 +1189,24 @@ button:focus,
 }
 
 /**************************************/
-@media(max-width : 1400px){
+@media(max-width : 1400px){   
 
-    .section-wrapper{
-        max-width: 1050px;
+    .menu{
+        margin-left: 352px;
+        margin-right: 365px;
     }
 
+
     .section__banner {
+        padding-top: 150px;
+        background: linear-gradient(to right, #FF9292, #DE5150);
+        color: white;
         height: 700px;
-        background-image: none;
     }
 
     .slider__item {
         display: grid;
-        grid-template-columns: 500px 1fr 480px;
+        grid-template-columns: 125px 500px 95px 480px 200px;
         grid-template-rows: 40px 30px 280px 45px 60px 35px 60px;
         text-align: left;
     }
@@ -1098,61 +1227,59 @@ button:focus,
 
     .form .container{
         background-image: none;
-        max-width: 1050px;
     }
 
     /*******************************/
 
     .image-description{
-        background-image: none;     
-        width: auto;   
+        background-image: none;
+        width: 332px;
     }
+
+
+    /*****************************/
+
 
     .description .container{
-        max-width: 1050px;
+        padding-left: 200px;
+        padding-right: 224px;
     }
 
-    .description-grid{
-        grid-template-columns:repeat(3, 1fr);
+    .product{
+        padding-left: 200px;
+        padding-right: 227px;
     }
 
-    .otherproducts .container{
-        max-width: 1050px;
+    .advantage__wrapper{
+        padding-left: 200px;
+        padding-right: 304px;
     }
 
-    .advantage .container{
-        max-width: 1000px;
-    }
 
-    .form{
-        background-image: none;
-    }
 
-    .section-wrapper2{
-        max-width: 1050px;
+    .contact-menu {        
+        padding-left: 315px;
+        padding-right: 185px;
     }
-
 }
 
 @media(max-width : 1200px){
 
-    .section-wrapper {
-        max-width: 950px;
+    .menu {
+        margin-left: 312px;
+        margin-right: 325px;
     }
     
-    .section__banner {        
+    .section__banner {
+        padding-top: 150px;
+        background: linear-gradient(to right, #FF9292, #DE5150);
+        color: white;
         height: 600px;
-    }
-
-    .section__banner .container {
-        margin: 0 auto;
-        position: relative;
-        max-width: 950px;
     }
 
     .slider__item {
         display: grid;
-        grid-template-columns: 450px 1fr 480px;
+        grid-template-columns: 100px 450px 75px 480px 95px;
         grid-template-rows: 40px 30px 280px 45px 60px 0px 60px;
         text-align: left;
     }
@@ -1161,16 +1288,14 @@ button:focus,
         width: 450px;
     }
 
-    /***************************/    
+    /***************************/
+
 
     .description .container{
-        max-width: 950px;
+        padding-left: 50px;
+        padding-right: 100px;
 
         grid-template-columns:460px 1fr 1fr; 
-    }
-
-    .otherproducts .container{
-        max-width: 950px;
     }
 
     .product{
@@ -1179,78 +1304,93 @@ button:focus,
     grid-template-rows: repeat(1, 300px);
 
     grid-gap: 15px;
-    }
 
-    .product__item1,
-    .product__item2,
-    .product__item3{
-        grid-template-columns: 230px 70px;
-        grid-template-rows: 350px 65px 45px;
+    padding-left: 50px;
+    padding-right: 227px;
+
+
     }
 
     .headphones1{
-        width: 290px;
-
-        position: relative;
-        bottom: 0;
+        width: 330px;
     }
 
-    .cart-a{
-        width: 55px;
-        height: 55px;
+    .product__item1 .cart-a{
+        width: 70px;
+        height: 70px;
 
         position: relative;
         top: 30px;
-        left: 25px;
+        left: 15px;
     }
-    .cart-a img{
-        width: 55px;
-        height: 55px;
+    .product__item1 .cart-a img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .headphones2{
+        width: 330px;        
+    }
+
+    .product__item2 .cart-a{
+        width: 70px;
+        height: 70px;
+
+        position: relative;
+        top: 30px;
+        left: 15px;
+    }
+    .product__item2 .cart-a img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .headphones3{
+        width: 330px;
+        position: relative;
+        top:-10px;
+    }
+
+    .product__item3 .cart-a{
+        width: 70px;
+        height: 70px;
+
+        position: relative;
+        top: 30px;
+        left: 15px;
+    }
+    .product__item3 .cart-a img{
+        width: 70px;
+        height: 70px;
     }
 
     /************************/
 
-    .advantage .container {
-        max-width: 900px;
-    }
-
     .advantage__wrapper{
         display: grid;
-        grid-template-columns: 500px 1fr;        
+        grid-template-columns: 550px 1fr;
+        padding-left: 50px;
+        padding-right: 304px;
     }
 
-    .advantage__wrapper--image img {
-        width: 550px;
-    }
-
-    /*****************************/
-
-    .form .container {        
-        max-width: 950px;
-    }
-
-    /*************************/
-
-    .section-wrapper2{
-        max-width: 950px;
+    .contact-menu {
+        padding-left: 275px;
+        padding-right: 145px;
     }
 }
 
 @media(max-width : 992px){
 
-    .section-wrapper {
-        max-width: 800px;
+    .menu {
+        margin-left: 200px;
+        margin-right: 250px;
     }
 
     .slider__item {
         display: grid;
-        grid-template-columns: 400px 1fr 400px;
+        grid-template-columns: 50px 400px 27px 420px 95px;
         grid-template-rows: 40px 30px 230px 45px 10px 35px 60px;
         text-align: left;
-    }
-
-    .section__banner .container {        
-        max-width: 800px;
     }
 
     .headphones {
@@ -1259,20 +1399,18 @@ button:focus,
 
     h1{
         font-size: 80px;
-        width: auto;
+
+        width: 480px;
     }
+
 
     /*********************************/
 
     .description .container{
-        max-width: 800px;
+        padding-left: 25px;
+        padding-right: 100px;
 
         grid-template-columns: 1fr 1fr 1fr;
-    }
-    /***********************************/
-
-    .otherproducts .container {
-        max-width: 800px;
     }
 
     .product{
@@ -1281,70 +1419,51 @@ button:focus,
     grid-template-rows: repeat(2, 500px);
 
     grid-gap: 50px;
+
+    padding-left: 50px;
+    padding-right: 227px;
     }    
 
     .product__item3 {
         grid-row: 2;
         grid-column: 1;
+
+        display: grid;
+        grid-template-columns: 262px 70px;
+        grid-template-rows: 385px 65px 45px;
     }
 
         /***************************/
 
-    .advantage .container {
-        max-width: 750px;
-    }
-
     .advantage__wrapper {
         display: grid;
-        grid-template-columns: 400px 350px;        
+        grid-template-columns: 500px 392px;
+        padding-left: 50px;
+        padding-right: 304px;
     }
 
     .advantage__wrapper--image img {
-        width: 450px;
+        width: 550px;
     }
 
-    .advantage__list h2{
-        width: auto;
-    }
-
-    /*************************/
-
-    .form .container {
-        max-width: 800px;
-    }
-
-    /****************************/
-
-    .section-wrapper2 {
-        max-width: 800px;
+    .contact-menu {
+        padding-left: 100px;
+        padding-right: 145px;
     }
 }
 
 @media(max-width : 768px){    
 
-    .section-wrapper {
-        max-width: 650px;
-    }
+    .menu {
+        margin-left: 150px;
+        margin-right: 150px;
+    }    
     
     .slider__item {
         display: grid;
         grid-template-columns: 10px 300px 27px 405px 25px;
         grid-template-rows: 40px 60px 60px 45px 90px 10px 10px;
         text-align: left;
-    }
-
-    .section__banner {
-        height: 400px;
-    }
-
-    .section__banner .container {
-        max-width: 650px;
-    }
-
-    .slider__item {
-        display: grid;
-        grid-template-columns: 300px 1fr 350px;
-        grid-template-rows: 40px 60px 60px 45px 90px 10px 10px;        
     }
 
     .headphones {
@@ -1357,7 +1476,8 @@ button:focus,
     }
 
     .description .container{
-        max-width: 650px;
+        padding-left: 25px;
+        padding-right: 224px;
 
         grid-template-columns: 1fr;
     }
@@ -1366,16 +1486,14 @@ button:focus,
         display: none;
     }
 
-    .otherproducts .container {
-        max-width: 650px;
-    }
-
-    .advantage .container {
-        max-width: 600px;
+    .product{
+        padding-left: 25px;
+        padding-right: 227px;
     }
 
     .advantage__wrapper{
-        
+        padding-left: 25px;
+        padding-right: 224px;
 
         display: grid;
         grid-template-columns: 1fr;
@@ -1389,37 +1507,28 @@ button:focus,
         grid-column: 1;
     }
 
-    /**********************/
-
-    .form .container {
-        max-width: 650px;
-    }
-
-    /********************/
-
-    .section-wrapper2 {
-        max-width: 650px;
+    .contact-menu {
+        padding-left: 10px;
+        padding-right: 50px;
     }
 }
 
 @media(max-width : 576px){
 
-    .section-wrapper {
-        max-width: 450px;
-    }
-
     .logo{
         display: none;
-    }    
+    }
+
+    .menu {
+        margin-left: 150px;
+        margin-right: 100px;
+    }
     
     .slider__item {
         display: grid;
-        grid-template-columns: 0px 0px 450px;
-        grid-template-rows: 40px 60px 60px 45px 90px 10px 10px;       
-    }
-
-    .section__banner .container {
-        max-width: 450px;
+        grid-template-columns: 50px 0px 27px 405px 25px;
+        grid-template-rows: 40px 60px 60px 45px 90px 10px 10px;
+        text-align: left;
     }
 
     .headphones {
@@ -1431,18 +1540,17 @@ button:focus,
     }
 
     .description .container{
-        max-width: 450px;
+        padding-left: 100px;
+        padding-right: 224px;
     }
 
     .image-description{
         display: none;
     }
 
-    .otherproducts .container {
-        max-width: 450px;
-    }
-
     .product{        
+        padding-left: 100px;
+        padding-right: 227px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 500px);
@@ -1464,23 +1572,16 @@ button:focus,
         grid-row: 3;
     }
 
-    /********************/
-
-    .advantage .container {
-        max-width: 450px;
-    }
-
     .advantage__wrapper{
+        padding-left: 100px;
+        padding-right: 224px;       
+
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
 
     .advantage__wrapper--image img{
         display: none;
-    }
-
-    .form .container {
-        max-width: 450px;
     }
 
     .form .container .q {
@@ -1500,7 +1601,6 @@ button:focus,
     }
 
     .section-wrapper2{
-        max-width: 450px;
         flex-direction: column;        
     }
 
@@ -1517,7 +1617,6 @@ button:focus,
 
     .section-wrapper {        
         height: 200px;
-        max-width: 280px;
     }    
 
     .mainmenu__list {
@@ -1530,7 +1629,11 @@ button:focus,
     }
 
     .menu {
-        transform: translateY(-250px);        
+        margin-left: 0px;
+        margin-right: 0px;
+
+        transform: translateY(-250px);
+        
     }
 
     .show{
@@ -1546,14 +1649,11 @@ button:focus,
         background-color: #DE5150;
     }
 
-    .section__banner .container {
-        max-width: 280px;
-    }
-
     .slider__item {
         display: grid;
-        grid-template-columns: 0px 0px 280px;
-        grid-template-rows: 40px 80px 60px 0px 0px 50px 10px;        
+        grid-template-columns: 10px 0px 0px 300px 0px;
+        grid-template-rows: 40px 80px 60px 0px 0px 50px 10px;
+        text-align: left;
     }
 
     .headphones {
@@ -1584,7 +1684,7 @@ button:focus,
         display: grid;
         grid-template-columns:1fr;
 
-        max-width: 280px;
+        padding-left: 15px;
     }
 
     .image-description{
@@ -1652,58 +1752,131 @@ button:focus,
     }
 /*******************************/
 
-    .otherproducts .container {
-        max-width: 280px;
-    }
-
     .otherproducts-text--1 {
         text-align: center;
         font-size: 44px;
         font-weight: 700;
         line-height: 1;
-    }    
+    }
 
-    .product {
+    .otherproducts-text--2 {        
+        width: 300px;        
+    }
+
+    .product{
+        padding-left: 10px;
+
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, 400px);
+        grid-template-rows: repeat(2, 500px);
     }
 
-    .product__item1, .product__item2, .product__item3 {
-        grid-template-columns: 180px 70px;
-        grid-template-rows: 300px 50px 45px;
+    .product__item1{
+        grid-column: 1;
+        grid-row: 1;
+        grid-template-columns: 200px 100px;
     }
-    .cart-a {
-        width: 50px;
-        height: 50px;
+
+    .product__item1 .cart-a {
+        width: 30px;
+        height: 30px;
         position: relative;
         top: 30px;
-        left: 40px;
+        left: 50px;
     }
 
-    .cart-a img {
-        width: 50px;
-        height: 50px;
+    .product__item1 .cart-a img {
+        width: 40px;
+        height: 40px;
     }
 
-    .star {        
+    .product__item1 .star {        
         padding-top: 0;
     }
 
-    .a {        
+    .product__item1 .a {        
         padding-top: 0;
     }
 
     .headphones1 {
-        width: 250px;
+        width: 285px;
     }
     
 /*********************************/
-    .advantage .container {
-        max-width: 280px;
+
+    .product__item2{
+        grid-column: 1;
+        grid-row: 2;  
+        grid-template-columns: 200px 100px;        
     }
 
+    .product__item2 .cart-a {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        top: 30px;
+        left: 50px;
+    }
+
+    .product__item2 .cart-a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .product__item2 .star {        
+        padding-top: 0;
+    }
+
+    .product__item2 .a {        
+        padding-top: 0;
+    }
+
+    .headphones2 {
+        width: 285px;
+    }
+
+    /****************************/
+    
+    .product__item3{       
+        grid-column: 1; 
+        grid-row: 3;
+        grid-template-columns: 200px 100px;
+    }
+
+    .product__item3 .cart-a {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        top: 30px;
+        left: 50px;
+    }
+
+    .product__item3 .cart-a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .product__item3 .star {        
+        padding-top: 0;
+    }
+
+    .product__item3 .a {        
+        padding-top: 0;
+    }
+
+    .headphones3 {
+        width: 285px;
+    }
+
+
+
+
+
+    /***************************/
+
     .advantage__wrapper{
+        padding-left: 10px;
+        padding-right: 224px;       
 
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -1728,10 +1901,6 @@ button:focus,
 
     /*****************/
 
-    .form .container {
-        max-width: 280px;
-    }
-
     .size-form p {
         line-height: 1;        
     }
@@ -1749,7 +1918,9 @@ button:focus,
     }
 
     .form-structure {        
-        width: 280px;        
+        width: 280px;
+
+        padding-left: 10px;
     }
 
     input{
@@ -1760,19 +1931,27 @@ button:focus,
 
     .button{
         width: 110px;
-    }   
-    /**************************/
+    }
 
-    .section-wrapper2 {
-        max-width: 280px;
+    .section-wrapper2{
+        padding-top: 0px;
     }
 
     .logo2{
         display: none;
-    }    
+    }
+
+    .contact-menu {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 
     .maincontact__list--1{
         column-gap: 10px;
         width: 200px;
-    }    
+    }
+
+    .contact-socialmedia{
+        padding-right: 50px;
+    }
 }
