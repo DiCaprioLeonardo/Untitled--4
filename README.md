@@ -1,9 +1,5 @@
 # Untitled-(4) Ермоленко Леонид ПИ-131
 
-1) Добавить на фон картинки (header-menu, description, form)
-2) Сделать карусель
-3) Доделать меню
-
 
 Ссылка на сайт: https://dicaprioleonardo.github.io/Untitled--4/
 
