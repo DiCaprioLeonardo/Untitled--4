@@ -1,14 +1,22 @@
-const btn = document.getElementById("navbar-toggler");
+const btn = document.getElementById("navbar-toggler"); 
+const logo = document.querySelector(".logo"); 
+const menu = document.querySelector(".menu"); 
+const menuWrapper = document.getElementById('menu__wrapper'); 
+const maxWidth = 1200+1;
 
-const logo = document.querySelector(".logo");
-const menu = document.querySelector(".menu");
 
-const menuWrapper = document.getElementById('menu__wrapper');
+if (window.innerWidth < maxWidth) {
+    logo.classList.add("show");
+    menu.classList.add("show");
+    menuWrapper.classList.add("transorm");
+    btn.classList.add("burger");
+}
 
 btn.addEventListener('click', () => {
-    logo.classList.toggle("show");
-    menu.classList.toggle("show");
-    menuWrapper.classList.toggle("transorm");
-
-    btn.classList.toggle("burger");
+    if (window.innerWidth < maxWidth) {
+        logo.classList.toggle("show");
+        menu.classList.toggle("show");
+        menuWrapper.classList.toggle("transorm");
+        btn.classList.toggle("burger");
+    }
 });
