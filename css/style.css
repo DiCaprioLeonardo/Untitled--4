@@ -969,11 +969,11 @@ button:focus,
 }
 
 .transorm{
-    transform: translateY(-100px);    
+    transform: translateY(-120px);    
 }
 
 .burger{
-    transform: translateY(50px);
+    transform: translateY(60px);
     background-color: #DE5150;
 }
 
