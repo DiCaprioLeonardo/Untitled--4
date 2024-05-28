@@ -187,6 +187,8 @@ h1{
 .navbar-toggler{
     background: none;
     border: none;
+
+    opacity: 0;
 }
 
 .navbar-toggler img{
@@ -1075,6 +1077,10 @@ button:focus,
         width: 450px;
     }
 
+    .navbar-toggler{    
+        opacity: 1;
+    }
+
     /***************************/    
 
     .description .container{
@@ -1234,89 +1240,7 @@ button:focus,
     }
 }
 
-@media(max-width : 768px){    
-
-    .section-wrapper {
-        max-width: 650px;
-    }
-    
-    .slider__item {
-        display: grid;
-        grid-template-columns: 10px 300px 27px 405px 25px;
-        grid-template-rows: 40px 60px 60px 45px 90px 10px 10px;
-        text-align: left;
-    }
-
-    .section__banner {
-        height: 400px;
-    }
-
-    .section__banner .container {
-        max-width: 650px;
-    }
-
-    .slider__item {
-        display: grid;
-        grid-template-columns: 300px 1fr 350px;
-        grid-template-rows: 40px 60px 60px 45px 90px 10px 10px;        
-    }
-
-    .headphones {
-        width: 300px;
-    }
-
-    h1 {
-        font-size: 60px;
-        width: 405px;
-    }
-
-    .description .container{
-        max-width: 650px;
-
-        grid-template-columns: 1fr;
-    }
-
-    .image-description{
-        display: none;
-    }
-
-    .otherproducts .container {
-        max-width: 650px;
-    }
-
-    .advantage .container {
-        max-width: 600px;
-    }
-
-    .advantage__wrapper{
-        
-
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .advantage__wrapper--image {
-        display: none;
-    }
-
-    .advantage__wrapper--list {
-        grid-column: 1;
-    }
-
-    /**********************/
-
-    .form .container {
-        max-width: 650px;
-    }
-
-    /********************/
-
-    .section-wrapper2 {
-        max-width: 650px;
-    }
-}
-
-@media(max-width : 576px){
+@media(max-width : 840px){
 
     .section-wrapper {
         max-width: 450px;
@@ -1427,7 +1351,7 @@ button:focus,
 
 }
 
-@media(max-width : 320px){
+@media(max-width : 520px){
 
     .section-wrapper {        
         height: 200px;
